@@ -3,6 +3,7 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 
 import { sortMethod, formatPrice } from '../helpers';
+import { Link } from 'react-router-dom';
 
 const Tableau = ({ cryptos }) => {
     const columns = [
@@ -15,8 +16,9 @@ const Tableau = ({ cryptos }) => {
                         alt=""
                         width="16"
                         height="16" />
-                    
+                    <Link to={`/${cryptos.original.id}/`}>
                     {cryptos.original.name}
+                    </Link>
                 </span>
             )
         },
